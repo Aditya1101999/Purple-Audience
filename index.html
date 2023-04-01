@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purple Audience - Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="./public/css/style.css">
+    <!--GSAP Animation JS Linking-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script>
+
+
+</head>
+
+<body data-barba="wrapper">
+    <div class="load-container">
+        <div class="loading-screen"></div>
+    </div>
+    <main data-barba="container" data-barba-namespace="home-section">
+        <header>
+            <nav>
+                <h1>
+                    <span id='highlighted-logo'>PURPLE</span> AUDIENCE
+                </h1>
+
+                <div class='menu'>
+                    <a class="about" href='about'>About</a>
+                    <a class="contact" href='#contact'>Contact Us</a>
+                    <a class="login" href="Login" class="Login">Login</a>
+                    <a href='#' class='Sign'>
+                        Sign Up
+                    </a>
+                </div>
+
+                <button class='hamburger'>
+                    <span class='material-icons'>menu</span>
+                </button>
+            </nav>
+        </header>
+
+        <div class='mobile-menu'>
+            <a href='#'>ABOUT</a>
+            <a href='#'>UPCOMING EVENTS</a>
+            <a href='#'>CONTACT US</a>
+            <a href='#'>Sign Up</a>
+        </div>
+
+        <div class='hero-section'>
+            <h1>Asking for</h1>
+            <h2>
+                help is <span>Ok...</span>
+            </h2>
+            <button class='Connect-with'>Connect with Us</button>
+        </div>
+
+        <div class='offer-section'>
+            <div class='max-width'>
+                <h1>
+                    <span>What </span> we offer
+                </h1>
+                <div class='card-container'>
+                    <div class='card-1 reveal'>
+                        <h1>Information.</h1>
+                        <p>
+                            Information on a range of mental health conditions, symptoms and
+                            their treatments.
+                        </p>
+                        <button>Read More</button>
+                    </div>
+                    <div class='card-2 reveal'>
+                        <h1>Communities.</h1>
+                        <p>
+                            Communities where individuals can connect with others who are
+                            going through similar experiences.
+                        </p>
+                        <button>Read More</button>
+                    </div>
+                    <div class='card-3 reveal'>
+                        <h1>Support.</h1>
+                        <p>
+                            We provide online therapy sessions and one-to-one counselling
+                            services with world-class specialists.
+                        </p>
+                        <button>Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class='audience-stories-container'>
+            <div class='max-width'>
+                <h1>
+                    <span>Audience </span> stories
+                </h1>
+                <div class='review-box reveal'>
+                    <h1>John Doe</h1>
+                    <img src='./Images/inverted-comma.svg'></img>
+                    <h2>Student - KPS Public School</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                        enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
+                    </p>
+                    <div class='dot-selection reveal'>
+                        <span class='dot active-dot'></span>
+                        <span class='dot'></span>
+                        <span class='dot'></span>
+                        <span class='dot'></span>
+                        <span class='dot'></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class='subscribe-section reveal'>
+            <h1>
+                <span>Subscribe</span> to our Newsletter.
+            </h1>
+            <p>
+                Recieve regular updates and information about Mental Health, tips for
+                stress and anxiety.
+            </p>
+            <input type='text' class='input-field-email' placeholder='Enter Your Email'></input>
+            <span class='submit-button'>
+                <button>Subscribe</button>
+            </span>
+        </div>
+
+        <div class='footer'>
+            <div class='inner-footer'>
+                <div class='footer-items'>
+                    <h1>
+                        <span>Purple</span> Audience
+                    </h1>
+                    <p>
+                        A website where you relax off a bit from your daily boring chores.
+                        Send it to your friends who are in need.
+                    </p>
+                </div>
+
+                <div class='footer-items'>
+                    <h3>Quick Links</h3>
+                    <div class='border1'></div>
+                    <ul>
+                        <a href='about'>
+                            <li>About</li>
+                        </a>
+                        <a href='#contact'>
+                            <li>Contact</li>
+                        </a>
+                        <a href='sign'>
+                            <li>Sign Up</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class='footer-items'>
+                    <h3>Services</h3>
+                    <div class='border1'></div>
+                    <ul>
+                        <a href='#'>
+                            <li>Community</li>
+                        </a>
+                        <a href='#'>
+                            <li>Support</li>
+                        </a>
+                    </ul>
+                </div>
+
+                <div class='footer-items'>
+                    <h3 id='contact'>Contact Us</h3>
+                    <div class='border1'></div>
+                    <ul>
+                        <li>
+                            <i class='fa fa-map-marker' aria-hidden='true'></i>Audience
+                            House, New Delhi, India
+                        </li>
+                        <li>
+                            <i class='fa fa-phone' aria-hidden='true'></i>+91 9402010021
+                        </li>
+                        <li>
+                            <i class='fa fa-envelope' aria-hidden='true'></i>
+                            PurpleAudience@gmail.com
+                        </li>
+                    </ul>
+
+                    <div class='social-media'>
+                        <a href='#'>
+                            <i class='fa fa-youtube'></i>
+                        </a>
+                        <a href='#'>
+                            <i class='fa fa-twitter'></i>
+                        </a>
+                        <a href='#'>
+                            <i class='fa fa-linkedin'></i>
+                        </a>
+                        <a href='#'>
+                            <i class='fa fa-facebook'></i>
+                        </a>
+                        <a href='#'>
+                            <i class='fa fa-whatsapp'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class='footer-bottom'>
+                Copyright &copy; Purple Audience 2022-23.
+            </div>
+        </div>
+    </main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script src="./app.js"></script>
+<script>
+    TweenMax.from("nav h1", 1, {
+        opacity: 0,
+        x: -20,
+        ease: Power3.easeInOut
+    }, 0.08)
+    TweenMax.from(".hero-section", 3, {
+        opacity: 0,
+        y: 10,
+        z: 10,
+        ease: Power3.easeInOut
+    }, 0.02)
+
+    TweenMax.from(".hero-section h1,.hero-section h2", 3, {
+        opacity: 0,
+        y: 10,
+        z: 10,
+        ease: Power3.easeInOut
+    }, 0.02)
+
+    TweenMax.from(".Connect-with", 3, {
+        opacity: 0,
+        x: -30,
+        ease: Power3.easeInOut
+    }, 0.04)
+
+
+    gsap.registerPlugin(ScrollTrigger)
+
+    gsap.to(".offer-section h1,.audience-stories-container h1", {
+        scrollTrigger: {
+            trigger: ".offer-section h1,.audience-stories-container h1",
+            toggleActions: "restart none none none"
+        },
+        opacity: 1,
+        duration: 1
+    })
+
+    gsap.to(".audience-stories-container h1", {
+        scrollTrigger: {
+            trigger: ".audience-stories-container h1",
+            toggleActions: "restart none none none"
+        },
+        opacity: 1,
+        duration: 1
+    })
+
+
+
+
+    window.addEventListener('scroll', reveal);
+    function reveal() {
+        var reveals = document.querySelectorAll('.reveal');
+
+        for (var i = 0; i < reveals.length; i++) {
+
+            var windowheight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint = 150;
+
+            if (revealtop < windowheight - revealpoint) {
+                reveals[i].classList.add('active');
+            }
+            else {
+                reveals[i].classList.remove('active');
+            }
+        }
+    }
+
+    TweenMax.from(".footer", 3, {
+        scrollTrigger: {
+            trigger: ".footer",
+            toggleActions: "restart none none none",
+        },
+        opacity: 0,
+        x: -30,
+        ease: Power3.easeInOut
+    }, 0.3)
+
+</script>
+
+</html>

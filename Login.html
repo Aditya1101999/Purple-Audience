@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./public/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="title-text">
+            <div class="title login">
+                <span>Welcome</span> Back
+            </div>
+            <div class="title signup">
+                Hello <span>Friend......</span>
+            </div>
+        </div>
+
+
+        <div class="form-container">
+            <div class="slide-controls">
+                <input type="radio" name="slide" id="login" checked>
+                <input type="radio" name="slide" id="signup">
+                <label for="login" class="slide login">Login</label>
+                <label for="signup" class="slide signup">Sign Up</label>
+                <div class="slider-tab"></div>
+            </div>
+
+
+            <div class="form-inner">
+                <form action="#" class="login" name="login-form" method="post">
+                    <div class="field username-field">
+                        <input type="text" placeholder="Enter your Username" name="name" class="username">
+                        <span class="error username-error">
+                            <i class="bx bx-error-circle error-icon"></i>
+                            <p class="error-text">Please enter a valid username.</p>
+                        </span>
+                    </div>
+
+                    <div class="field email-field">
+                        <input type="text" placeholder="Email Address" name="email" class="email">
+                        <span class="error email-error">
+                            <i class="bx bx-error-circle error-icon"></i>
+                            <p class="error-text">Please enter a valid Email.</p>
+                        </span>
+                    </div>
+
+
+                    <div class="field create-password">
+                        <input type="password" placeholder="Password" name="password" class="password"><i
+                            class="fa fa-sharp fa-solid fa-eye" id="togglePassword"></i>
+                        <span class="error password-error">
+                            <i class="bx bx-error-circle error-icon"></i>
+                            <p class="error-text"> Please enter at least 8 character with number, symbol, small and
+                                capital letter.</p>
+                        </span>
+                    </div>
+
+
+
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Login" name="submit">
+                    </div>
+                    <div class="signup-link">
+                        Don't Have Account? <a href="">Create A New</a>
+                    </div>
+                    <div class="social-signup">
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-google"></i>
+                        <i class="fa fa-twitter"></i>
+                    </div>
+                </form>
+
+                <!-----------------------Sign Up Page-------------------------->
+                <form action="#" class="signup" name="signup-form">
+                    <div class="field">
+                        <input type="text" placeholder="Enter your Full Name" name="name" class="username">
+                        <span class="error username-error">
+                            <i class="bx bx-error-circle error-icon"></i>
+                            <p class="error-text">Please enter a valid username.</p>
+                        </span>
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="Enter your Phone Number" name="number" class="phnumber">
+
+                    </div>
+
+                    <div class="field">
+                        <input type="text" placeholder="Email Address" name="email" class="email">
+                        <span class="error email-error">
+                            <i class="bx bx-error-circle error-icon"></i>
+                            <p class="error-text">Please enter a valid Email.</p>
+                        </span>
+                    </div>
+
+                    <div class="field">
+                        <input type="password" placeholder="Password" name="password" class="password"><i
+                            class="fa fa-eye" id="togglePassword"></i>
+                        <span class="error password-error">
+                            <i class="bx bx-error-circle error-icon"></i>
+                            <p class="error-text"> Please enter at least 8 character with number, symbol, small and
+                                capital letter.</p>
+                        </span>
+                    </div>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="SignUp" name="submit">
+                    </div>
+                    <div class="social-signup">
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-google"></i>
+                        <i class="fa fa-twitter"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./public/js/Login.js"></script>
+
+</html>

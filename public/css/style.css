@@ -1,0 +1,582 @@
+@import url("https://fonts.googleapis.com/css2?family=Amita&family=Great+Vibes&family=Poppins&family=Roboto+Slab:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: akira;
+  src: url("../Resources/Akira\ Expanded\ Demo.otf");
+}
+html {
+  font-size: 62.5%;
+  cursor: pointer;
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+}
+:root {
+  --primary-color: #8c00ff;
+  --secondary-color: #212529;
+  --highlighted-text-color: white;
+  --hovered-color: linear-gradient(
+    25deg,
+    rgba(0, 67, 255, 0.7) 0%,
+    rgba(137, 55, 255, 1) 100%
+  );
+}
+nav {
+  position: relative;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+nav h1 {
+  padding: 1.2rem 1rem;
+  padding-right: calc(1rem - 5px);
+  font-family: akira;
+  font-size: 3rem;
+}
+nav h1 span {
+  font-family: akira;
+  color: var(--primary-color);
+}
+.menu {
+  display: none;
+  align-items: center;
+  margin: 0 -1.5rem;
+}
+
+.menu a {
+  margin: 0 2rem;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+}
+.menu a:hover {
+  color: var(--primary-color);
+}
+.about,
+.contact,
+.login {
+  color: black;
+}
+.Sign {
+  color: var(--highlighted-text-color);
+  background: linear-gradient(
+    25deg,
+    rgba(0, 67, 255, 0.7) 0%,
+    rgba(137, 55, 255, 1) 100%
+  );
+  padding: 0.8rem 2rem;
+  border-radius: 3rem;
+}
+.mobile-menu a:hover {
+  color: crimson;
+  background-color: #fff;
+}
+
+.hamburger {
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+}
+.hamburger span {
+  color: var(--secondary-color);
+  font-size: 4rem;
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 98;
+  padding-top: 6rem;
+  opacity: 0;
+  transform: translateY(-100%);
+  background-color: #000;
+  color: #fff;
+  transition: 0.3s;
+}
+.mobile-menu.is-open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 1rem;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.25rem;
+  transition: 0.3s;
+}
+
+/*------------------------------------
+============Hero Section=============
+-------------------------------------*/
+.hero-section {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../Images/hero-section-image.svg");
+  background-size: cover;
+  position: relative;
+}
+.hero-section h1,
+.hero-section h2 {
+  font-family: "Great Vibes", cursive;
+}
+.hero-section h1 {
+  font-size: clamp(12rem, 22vw, 9rem);
+  position: absolute;
+  top: 25%;
+  left: 12%;
+}
+.hero-section h2 {
+  font-size: clamp(15rem, 22vw, 12rem);
+  position: absolute;
+  top: 45%;
+  left: 12%;
+}
+.Connect-with {
+  position: absolute;
+  top: 70%;
+  left: 12%;
+  padding: 2rem 2rem;
+  background: linear-gradient(
+    25deg,
+    rgba(0, 67, 255, 0.7) 0%,
+    rgba(137, 55, 255, 1) 100%
+  );
+  border: none;
+  color: var(--highlighted-text-color);
+  font-size: 2rem;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+.Connect-with button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -1.5rem;
+  width: 1rem;
+  height: 4.3rem;
+  background-color: var(--primary-color);
+  transition: all 0.4s;
+}
+.Connect-with button:hover::after {
+  content: "";
+  right: 0rem;
+}
+.hero-section h2 span {
+  font-family: "Great Vibes", cursive;
+  color: var(--primary-color);
+}
+/*------------------------------------
+==========What we Offer Section=====
+-------------------------------------*/
+.offer-section {
+  width: 100%;
+  height: 100vh;
+}
+.max-width {
+  max-width: 1280px;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.offer-section .max-width {
+  width: 100%;
+}
+.offer-section h1,
+.audience-stories-container h1 {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(2rem, 7vw, 6rem);
+  font-family: "Poppins", sans-serif;
+  opacity: 0;
+}
+.offer-section h1 span,
+.audience-stories-container h1 span {
+  font-family: "Great Vibes", cursive;
+  color: var(--primary-color);
+  font-size: clamp(2rem, 7vw, 8rem);
+}
+.card-container {
+  margin-top: 15rem;
+  width: 100%;
+  height: 50rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 43px;
+  grid-row-gap: 0px;
+}
+.card-1,
+.card-2,
+.card-3 {
+  cursor: pointer;
+  width: 100%;
+  height: 50rem;
+  border-radius: 3rem;
+  background-color: #f1f7fd;
+  transition: all 0.5s;
+}
+
+.card-1 {
+  grid-area: 1 / 1 / 2 / 2;
+  position: relative;
+}
+.card-1 h1,
+.card-2 h1,
+.card-3 h1 {
+  color: var(--secondary-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 5rem;
+  background: linear-gradient(
+    25deg,
+    rgba(0, 67, 255, 0.7) 0%,
+    rgba(137, 55, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  user-select: none;
+}
+.card-1 p,
+.card-2 p,
+.card-3 p {
+  position: relative;
+  top: 50%;
+  font-size: 2rem;
+  margin: 0 0.7rem;
+  font-family: "Poppins", sans-serif;
+  color: var(--secondary-color);
+}
+.card-1 button,
+.card-2 button,
+.card-3 button {
+  position: relative;
+  margin-top: 75%;
+  align-items: center;
+  padding: 2rem 6rem;
+  font-size: 2rem;
+  background: linear-gradient(
+    25deg,
+    rgba(0, 67, 255, 0.7) 0%,
+    rgba(137, 55, 255, 1) 100%
+  );
+  border: none;
+  border-radius: 4rem;
+  cursor: pointer;
+  color: var(--highlighted-text-color);
+}
+
+.card-2 {
+  grid-area: 1 / 2 / 2 / 3;
+  position: relative;
+}
+.card-3 {
+  grid-area: 1 / 3 / 2 / 4;
+  position: relative;
+}
+/*------------------------------------
+============Audience Review Section===
+-------------------------------------*/
+.audience-stories-container {
+  width: 100%;
+  height: 100vh;
+}
+.audience-stories-container .max-width {
+  width: 100%;
+}
+.review-box {
+  width: 70%;
+  height: 40rem;
+  border: 5px solid rgb(39, 39, 39);
+  position: relative;
+  background-color: white;
+  box-shadow: 15px 15px 0px var(--primary-color);
+  border-radius: 2rem;
+}
+.review-box h1 {
+  background: linear-gradient(
+    25deg,
+    rgba(0, 67, 255, 0.7) 0%,
+    rgba(137, 55, 255, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 5rem;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+}
+.review-box img {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 100px;
+  height: 100px;
+}
+.review-box h2 {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  top: 25%;
+}
+.review-box p {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  top: 35%;
+  left: 0;
+  margin: 0 7rem;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 20% 1rem;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active-dot {
+  background-color: var(--primary-color);
+}
+/*------------------------------------
+============Subscribe Section=========
+-------------------------------------*/
+.subscribe-section {
+  width: 100%;
+  height: 30rem;
+  position: relative;
+}
+.subscribe-section h1 {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 5rem;
+  font-family: "Poppins", sans-serif;
+  color: var(--secondary-color);
+}
+.subscribe-section p {
+  text-align: center;
+  font-size: clamp(1rem, 5vw, 2rem);
+  font-family: "Poppins", sans-serif;
+  color: var(--secondary-color);
+}
+.subscribe-section span {
+  color: var(--primary-color);
+  font-family: "Great Vibes", cursive;
+}
+.input-field-email {
+  padding: 1rem 2rem;
+  width: 40%;
+  position: relative;
+  left: 22%;
+  top: 10%;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+}
+.submit-button button {
+  padding: 1rem 2rem;
+  position: relative;
+  width: 15%;
+  left: 24%;
+  top: 10%;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(
+    25deg,
+    rgba(0, 67, 255, 0.7) 0%,
+    rgba(137, 55, 255, 1) 100%
+  );
+  color: var(--highlighted-text-color);
+  border-radius: 0.2rem;
+  border: none;
+  cursor: pointer;
+}
+/*------------------------------------
+============Footer Section============
+-------------------------------------*/
+.footer {
+  width: 100%;
+  display: block;
+}
+.inner-footer {
+  width: 95%;
+  margin: auto;
+  padding: 30px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: center;
+  border-top: 2px solid rgb(87, 87, 87, 0.3);
+  border-bottom: 2px solid rgb(87, 87, 87, 0.3);
+}
+
+.footer-items {
+  width: 25%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  color: var(--secondary-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+}
+
+.footer-items p {
+  font-size: 1.4rem;
+  text-align: justify;
+  line-height: 25px;
+  color: var(--secondary-color);
+}
+
+.footer-items h1 {
+  color: var(--secondary-color);
+  font-family: akira;
+}
+.footer-items h1 span {
+  color: var(--primary-color);
+}
+.border1 {
+  height: 3px;
+  width: 40px;
+  background: var(--primary-color);
+  color: var(--primary-color);
+  background-color: var(--primary-color);
+  border: 0px;
+}
+
+ul {
+  list-style: none;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+}
+
+ul a {
+  text-decoration: none;
+  outline: none;
+  color: var(--secondary-color);
+  transition: 0.3s;
+}
+
+ul a:hover {
+  color: var(--primary-color);
+}
+
+ul li {
+  margin: 10px 0;
+  height: 25px;
+}
+
+li i {
+  margin-right: 20px;
+}
+
+.social-media {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.social-media a {
+  text-decoration: none;
+}
+
+.social-media i {
+  height: 25px;
+  width: 25px;
+  margin: 20px 10px;
+  padding: 4px;
+  transition: 0.5s;
+  color: var(--primary-color);
+}
+
+.social-media i:hover {
+  transform: scale(1.5);
+}
+
+.footer-bottom {
+  padding: 10px;
+  color: var(--secondary-color);
+  font-size: 1.4rem;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px) rotateX(60deg);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+/* for tablet mode view */
+@media screen and (max-width: 1275px) {
+  .footer-items {
+    width: 50%;
+  }
+}
+/* for mobile screen view */
+@media screen and (max-width: 1170px) {
+  .card-container {
+    display: block;
+    width: 50%;
+  }
+  .card-1,
+  .card-2,
+  .card-3 {
+    height: 40%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  .card-1 button,
+  .card-2 button,
+  .card-3 button {
+    display: none;
+  }
+}
+@media screen and (max-width: 660px) {
+  .footer-items {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-menu,
+  .hamburger {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
+}
